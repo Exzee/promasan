@@ -542,26 +542,7 @@
     
     
 
-    {{-- <div class="row">
-
-        <div class="image">
-            <img src="{{ asset('skin3/images/contact-img.svg') }}" alt="">
-        </div>
-
-        <form action="">
-            <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
-            </div>
-            <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
-            </div>
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-            <input type="submit" class="btn" value="send message">
-        </form>
-
-    </div> --}}
+   
     
 </section>
 
@@ -569,7 +550,7 @@
 
 <!-- brand section  -->
 <section class="brand-container">
-    {{-- <h1 class="heading">
+    <h1 class="heading">
         <span>s</span>
         <span>p</span>
         <span>o</span>
@@ -577,7 +558,7 @@
         <span>s</span>
         <span>o</span>
         <span>r</span>
-    </h1> --}}
+    </h1>
 
     <div class="swiper-container brand-slider">
         <div class="swiper-wrapper">
