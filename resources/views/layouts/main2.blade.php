@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title> @yield('title') - Portal Informasi Wisata Desa Ngesrep Balong</title>
-    <meta name="description" content="">
+    <meta name="description" content="Destinasi Wisata Desa Ngesrep Balong Kendal Jawa Tengah">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link rel="manifest" href="site.webmanifest"> -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="https://media.flaticon.com/dist/min/img/favicon.ico">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -45,7 +45,7 @@
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="/">
-                                        <img src="{{ asset('template/img/logo.png') }}" alt="">
+                                        <img src="{{ asset('template/img/logo1.png') }}" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -54,21 +54,21 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a class="active" href="/">home</a></li>
-                                            <li><a href="{{ asset('template/about.html') }}">About</a></li>
-                                            <li><a class="" href="{{ asset('template/travel_destination.html') }}">Destination</a></li>
-                                            <li><a href="#">pages <i class="ti-angle-down"></i></a>
+                                            <li><a href="/about">About</a></li>
+                                            <li><a class="" href="/destinasi">Destinasi</a></li>
+                                            {{-- <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                         <li><a href="{{ asset('template/destination_details.html') }}">Destinations details</a></li>
                                                         <li><a href="{{ asset('template/elements.html') }}">elements</a></li>
                                                 </ul>
-                                            </li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            </li> --}}
+                                            {{-- <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="{{ asset('template/blog.html') }}">blog</a></li>
                                                     <li><a href="{{ asset('template/single-blog.html') }}">single-blog</a></li>
                                                 </ul>
-                                            </li>
-                                            <li><a href="{{ asset('template/contact.html') }}">Contact</a></li>
+                                            </li> --}}
+                                            <li><a href="/panduan">Panduan Wisata</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -150,84 +150,11 @@
     @yield('tujuan-wisata')
 
 
-    <div class="video_area video_bg overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="video_wrap text-center">
-                        <h3>Enjoy Video</h3>
-                        <div class="video_icon">
-                            <a class="popup-video video_play_button" href="https://www.youtube.com/watch?v=wE4sIncn0uk">
-                                <i class="fa fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    {{-- VIDEO PREVIEW --}}
+    @yield('video-preview')
 
-
-    <div class="travel_variation_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="{{ asset('template/img/svg_icon/roadmap.png') }}" alt="">
-                        </div>
-                        <h3>Awesome Journey</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="{{ asset('template/img/svg_icon/hotel.png') }}" alt="">
-                        </div>
-                        <h3>Penginapan</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="{{ asset('template/img/svg_icon/horn.png') }}" alt="">
-                        </div>
-                        <h3>Guide</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="{{ asset('template/img/svg_icon/food.png') }}" alt="">
-                        </div>
-                        <h3>Kuliner</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="{{ asset('template/img/svg_icon/hiking.png') }}" alt="">
-                        </div>
-                        <h3>Jalur Pendakian</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_travel text-center">
-                        <div class="icon">
-                            <img src="{{ asset('template/img/svg_icon/parking.png') }}" alt="">
-                        </div>
-                        <h3>Parkir Luas</h3>
-                        <p>A wonderful serenity has taken to the possession of my entire soul.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!--FASILITAS-->
+    @yield('fasilitas')
 
 <!--Recent Event/Blog-->
     {{-- <div class="recent_trip_area">
@@ -302,7 +229,7 @@
                         <div class="footer_widget">
                             <div class="footer_logo">
                                 <a href="#">
-                                    <img src="{{ asset('template/img/footer_logo.png') }}" alt="">
+                                    <img src="{{ asset('template/img/logo_footer.png') }}" alt="">
                                 </a>
                             </div>
                             <p>Desa Ngeserep Balong <br> Kendal Jawa Tengah <br>

@@ -17,6 +17,23 @@ Route::get('/', function () {
     return view('partials.home');
 });
 
+Route::get('/about', function () {
+    return view('partials.about');
+});
+
+Route::get('/destinasi', function () {
+    return view('partials.destinasi-wisata');
+});
+
+Route::get('/destinasi/detail', function () {
+    return view('partials.detail-artikel');
+});
+
+Route::get('/panduan', function () {
+    return view('partials.panduan');
+});
+
 Route::get('/home', function () {
     return view('layouts.main2');
 });
+

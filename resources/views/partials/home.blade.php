@@ -212,7 +212,7 @@
                         <p class="prise">Free</p>
                     </div>
                     <div class="place_info">
-                        <a href="{{ asset('template/destination_details.html') }}"><h3>Puncak Gunung Ungaran</h3></a>
+                        <a href="/destinasi/detail"><h3>Puncak Gunung Ungaran</h3></a>
                         <p>Promasan</p>
                         <div class="rating_days d-flex justify-content-between">
                             <span class="d-flex justify-content-center align-items-center">
@@ -238,7 +238,7 @@
                         <p class="prise">Free</p>
                     </div>
                     <div class="place_info">
-                        <a href="{{ asset('template/destination_details.html') }}"><h3>Perkebunan Teh</h3></a>
+                        <a href="/destinasi/detail"><h3>Perkebunan Teh</h3></a>
                         <p>Medini</p>
                         <div class="rating_days d-flex justify-content-between">
                             <span class="d-flex justify-content-center align-items-center">
@@ -264,7 +264,7 @@
                         <p class="prise">Free</p>
                     </div>
                     <div class="place_info">
-                        <a href="{{ asset('template/destination_details.html') }}"><h3>Camping Ground</h3></a>
+                        <a href="/destinasi/detail"><h3>Camping Ground</h3></a>
                         <p>Promasan</p>
                         <div class="rating_days d-flex justify-content-between">
                             <span class="d-flex justify-content-center align-items-center">
@@ -342,7 +342,7 @@
                         <p class="prise">Free</p>
                     </div>
                     <div class="place_info">
-                        <a href="{{ asset('template/destination_details.html') }}"><h3>Curug Lawe Sicepit</h3></a>
+                        <a href="/destinasi/detail"><h3>Curug Lawe Sicepit</h3></a>
                         <p>United State of America</p>
                         <div class="rating_days d-flex justify-content-between">
                             <span class="d-flex justify-content-center align-items-center">
@@ -366,6 +366,92 @@
             <div class="col-lg-12">
                 <div class="more_place_btn text-center">
                     <a class="boxed-btn4" href="#">More Places</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+
+{{-- VIDEO PREVIEW --}}
+@section('video-preview')
+<div class="video_area video_bg overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="video_wrap text-center">
+                    <h3>Enjoy Video</h3>
+                    <div class="video_icon">
+                        <a class="popup-video video_play_button" href="https://www.youtube.com/watch?v=wE4sIncn0uk">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+
+{{-- Fasilitas --}}
+@section('fasilitas')
+<div class="travel_variation_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_travel text-center">
+                    <div class="icon">
+                        <img src="{{ asset('template/img/svg_icon/roadmap.png') }}" alt="">
+                    </div>
+                    <h3>Awesome Journey</h3>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_travel text-center">
+                    <div class="icon">
+                        <img src="{{ asset('template/img/svg_icon/hotel.png') }}" alt="">
+                    </div>
+                    <h3>Penginapan</h3>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_travel text-center">
+                    <div class="icon">
+                        <img src="{{ asset('template/img/svg_icon/horn.png') }}" alt="">
+                    </div>
+                    <h3>Guide</h3>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_travel text-center">
+                    <div class="icon">
+                        <img src="{{ asset('template/img/svg_icon/food.png') }}" alt="">
+                    </div>
+                    <h3>Kuliner</h3>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_travel text-center">
+                    <div class="icon">
+                        <img src="{{ asset('template/img/svg_icon/hiking.png') }}" alt="">
+                    </div>
+                    <h3>Jalur Pendakian</h3>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single_travel text-center">
+                    <div class="icon">
+                        <img src="{{ asset('template/img/svg_icon/parking.png') }}" alt="">
+                    </div>
+                    <h3>Parkir Luas</h3>
+                    <p>A wonderful serenity has taken to the possession of my entire soul.</p>
                 </div>
             </div>
         </div>
