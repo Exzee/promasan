@@ -30,12 +30,25 @@
                         <div class="story_info">
                             <div class="row">
                                 <div class="col-lg-9">
-                                    <p>Consulting represents success at realizing the company is going in the wrong direction. The only time the company fails is when it is not possible to do a turnaround anymore. We help companies pivot into more profitable directions where they can expand and grow. It is inevitable that companies will end up making a few mistakes; we help them correct these mistakes.</p>
-                            <p>Consulting represents success at realizing the company is going in the wrong direction. The only time the company fails is when it is not possible to do a turnaround anymore. We help companies pivot into more profitable directions where they can expand and grow. It is inevitable that companies will end up making a few mistakes; we help them correct these mistakes.</p>
+                                    <p>Website desa wisata ini merupakan website portal online yang dikembangkan oleh Mahasiswa Universitas Selamat Sri Kendal yang bertujuan untuk menyajikan informasi wisata yang berada di Desa Ngresepbalong Kecamatan Limbangan Kabupaten Kendal, Jawa Tengah sehingga dapat membantu dan dikenal oleh para wisatawan.</p> 
+                                    <p>Pada website ini berisikan tentang informasi tempat wisata, penginapan, kuliner, panduan wisata, rute perjalanan, jalur pendakian dll.</p> 
+                                    <p>Website wisata ini dibuat dan dipublikasi pada 7 Desember 2021.</p>
+                                    <p>Dengan adanya website ini diharapkan dapat menyajikan kontent terbaik, layanan multi guna serta partisipasi mempromosikan potensi obyek wisata di Desa Ngresepbalong.</p>
                                 </div>
+                                
+                                <div class="col-lg-8 col-md-8 section-top-border text-right">
+                                    <hr>
+                                    <h3 class="mb-30">Hubungi Kami</h3>
+                                    <p>Pengelola</p>
+                                    <p>+628X XXX XXX </p>
+                                    <p>admin@ngesrepbalong.id</p>
+
+                                </div>
+
                             </div>
                         </div>
-                        <div class="story_thumb">
+                        {{-- SISIPAN GAMBAR --}}
+                        {{-- <div class="story_thumb">
                             <div class="row">
                                 <div class="col-lg-5 col-md-6">
                                     <div class="thumb padd_1">
@@ -48,30 +61,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        {{-- COUNTER WIDGET --}}
-                        {{-- <div class="counter_wrap">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="single_counter text-center">
-                                        <h3  class="counter">378</h3>
-                                        <p>Tour has done successfully</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="single_counter text-center">
-                                        <h3 class="counter">30</h3>
-                                        <p>Yearly tour arrange</p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4">
-                                    <div class="single_counter text-center">
-                                        <h3 class="counter">2263</h3>
-                                        <p>Happy Clients</p>
-                                    </div>
-                                </div>
-                            </div>
                         </div> --}}
+                        {{-- GAMBAR END --}}
                     </div>
                 </div>
             </div>

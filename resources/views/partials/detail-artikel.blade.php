@@ -4,8 +4,8 @@
 
 <div class="destination_banner_wrap overlay">
     <div class="destination_text text-center">
-        <h3>DETAIL ARTIKEL</h3>
-        <p>Pixel perfect design with awesome contents</p>
+        <h3>{{ $post->title }}</h3>
+        <p>Posted By: {{ $post->author->name }} about {{ $post->category->name }}</p>
     </div>
 </div>
 
@@ -14,78 +14,86 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-9">
+                <div class="thumb">
+                    <p class="price"><a href="/lokasi/{{ $post->category->name }}">
+                            {{ $post->category->name }}</a></p>
+                </div>
                 <div class="destination_info">
-                    <h3>JUDUL ARTIKEL</h3>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                    <p>Variations of passages of lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                    <div class="single_destination">
-                        <h4>Day-01</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                    </div>
-                    <div class="single_destination">
-                        <h4>Day-02</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                    </div>
-                    <div class="single_destination">
-                        <h4>Day-03</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.</p>
-                    </div>
+                    <h3>{{ $post['title'] }}</h3>
+                    <p>{!!  $post['body']  !!}</p>
+
                 </div>
                 <div class="bordered_1px"></div>
-                
-            </div>           
+
+            </div>
         </div>
     </div>
 
-{{-- GAMBAR GAMBAR --}}
-<div class="container">
-    <div class="section-top-border">
-        <h3>Image Gallery</h3>
-        <div class="row gallery-item">
-            <div class="col-md-4">
-                <a href="{{ asset('template/img/elements/g1.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g1.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ asset('template/img/elements/g2.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g2.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ asset('template/img/elements/g3.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g3.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="{{ asset('template/img/elements/g4.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g4.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-6">
-                <a href="{{ asset('template/img/elements/g5.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g5.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ asset('template/img/elements/g6.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g6.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ asset('template/img/elements/g7.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g7.jpg);"></div>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ asset('template/img/elements/g8.jpg') }}" class="img-pop-up">
-                    <div class="single-gallery-image" style="background: url(/template/img/elements/g8.jpg);"></div>
-                </a>
+    {{-- GAMBAR GAMBAR --}}
+    <div class="container">
+        <div class="section-top-border">
+            <h3>Image Gallery</h3>
+            <div class="row gallery-item">
+                <div class="col-md-12">
+
+                    @if ($post->image_thumbnail)
+                        <a href="{{ asset('storage/' . $post->image_thumbnail) }}" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(/storage/{{ $post->image_thumbnail }});"></div>
+                        </a>
+                    @else
+                        <a href="{{ asset('template/img/pages/no-image.png') }}" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(template/img/pages/no-image.png);"></div>
+                        </a>
+                    @endif
+                </div>
+
+                <div class="col-md-4">
+                    {{-- GAMBAR 1 --}}
+                    @if ($post->image_post_satu)
+                        <a href="{{ asset('storage/' . $post->image_post_satu) }}" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(/storage/{{ $post->image_post_satu }});"></div>
+                        </a>
+                    @else
+                        {{-- <a href="https://source.unsplash.com/653x250/?travel" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(https://source.unsplash.com/653x250/?travel);"></div>
+                        </a> --}}
+                    @endif
+                </div>
+                <div class="col-md-4">
+                    {{-- GAMBAR 2 --}}
+                    @if ($post->image_post_dua)
+                        <a href="{{ asset('storage/' . $post->image_post_dua) }}" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(/storage/{{ $post->image_post_dua }});"></div>
+                        </a>
+                    @else
+                        {{-- <a href="https://source.unsplash.com/653x250/?travel" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(https://source.unsplash.com/653x250/?travel);"></div>
+                        </a> --}}
+                    @endif
+                </div>
+                <div class="col-md-4">
+                    {{-- GAMBAR 3 --}}
+                    @if ($post->image_post_tiga)
+                        <a href="{{ asset('storage/' . $post->image_post_tiga) }}" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(/storage/{{ $post->image_post_tiga }});"></div>
+                        </a>
+                    @else
+                        {{-- <a href="https://source.unsplash.com/653x250/?travel" class="img-pop-up">
+                            <div class="single-gallery-image"
+                                style="background: url(https://source.unsplash.com/653x250/?travel);"></div>
+                        </a> --}}
+                    @endif
+
+                </div>
             </div>
         </div>
     </div>
-    </div>
-    
+
 </div>
-
-
